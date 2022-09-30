@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*8gvu4b4@rzz16b4566id_q_v%o7uoni*_d0)h3vyd#6m_1gl6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['thoughtorgapi.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['thoughtorgapi.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition

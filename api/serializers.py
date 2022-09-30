@@ -6,12 +6,12 @@ from api.models import Reminder
 class ReminderSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     owner = serializers.ReadOnlyField(source='owner.username')
-    reminder = serializers.CharField(required=False, allow_blank=True, max_length=5000)
+    text = serializers.CharField(required=False, allow_blank=True, max_length=5000)
     class Meta:
         model = Reminder
-        fields = ['id','owner','created','recurring','reminder']
+        fields = ['id','owner','created','recurring','text']
     def update(self, instance, validated_data):
-        instance.reminder = validated_data.get('reminder', instance.reminder)
+        instance.text = validated_data.get('text', instance.text)
         instance.recurring = validated_data.get('recurring', instance.recurring)
         instance.save()
         return instance
