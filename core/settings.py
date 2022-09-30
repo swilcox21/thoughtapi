@@ -139,7 +139,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",    
-    "http://localhost:3000",    
+    "http://localhost:3000",
+    "https://thought-org.vercel.app",
 ]
 
 REST_FRAMEWORK = {
